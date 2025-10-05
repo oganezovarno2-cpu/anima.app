@@ -1,6 +1,14 @@
+/* ==== Tailwind directives (ОБЯЗАТЕЛЬНО в самом верху) ==== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==== Шрифты ==== */
 @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
 
+/* ==== Базовая сцена/фон ==== */
 html,body,#root { height:100%; }
+
 body {
   font-family: "SF Pro Display", Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color:#232323;
@@ -10,6 +18,8 @@ body {
     radial-gradient(65% 65% at 50% 85%, #FFD9E9 0%, transparent 60%),
     linear-gradient(180deg,#F6F2FF 0%, #EAF6FF 100%);
 }
+
+/* ==== Стекло ==== */
 .glass {
   background: rgba(255,255,255,.55);
   border: 1px solid rgba(0,0,0,.06);
@@ -17,13 +27,19 @@ body {
   -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 12px 40px rgba(58,53,94,.18);
 }
+
+/* ==== Кнопка-градиент ==== */
 .btn-grad {
   background: linear-gradient(90deg, #F1A5C6 0%, #C7B3FF 100%);
 }
 .btn-grad:active { transform: translateY(1px); opacity:.95 }
-h1.hi {
+
+/* ==== Крупный заголовок на светлом фоне ==== */
+h1.hi{
   font-weight: 700; font-size: 36px; line-height: 1.05; letter-spacing: .2px;
   color: rgba(255,255,255,.96); text-shadow: 0 2px 16px rgba(0,0,0,.08);
 }
-::-webkit-scrollbar{ width:10px;height:10px } 
+
+/* ==== Скроллбар (тонкий) ==== */
+::-webkit-scrollbar{ width:10px;height:10px }
 ::-webkit-scrollbar-thumb{ background:rgba(58,53,94,.15); border-radius:999px }

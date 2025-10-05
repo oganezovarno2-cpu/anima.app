@@ -1,17 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root { color-scheme: light; }
-
-html, body, #root { height: 100%; }
-
+html,body,#root { height:100%; }
 body {
-  background: linear-gradient(135deg, #fde2f1, #e6e1ff);
-  color: #1a1a1a;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial;
+  font-family: "SF Pro Display", Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color:#232323;
+  background:
+    radial-gradient(60% 60% at 20% 15%, #BFE7FF 0%, transparent 60%),
+    radial-gradient(60% 60% at 85% 20%, #DCCBFF 0%, transparent 60%),
+    radial-gradient(65% 65% at 50% 85%, #FFD9E9 0%, transparent 60%),
+    linear-gradient(180deg,#F6F2FF 0%, #EAF6FF 100%);
 }
-
-.shadow-glow { box-shadow: 0 0 50px rgba(255, 192, 203, 0.35); }
+.glass {
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(0,0,0,.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 12px 40px rgba(58,53,94,.18);
+}
+.btn-grad {
+  background: linear-gradient(90deg, #F1A5C6 0%, #C7B3FF 100%);
+}
+.btn-grad:active { transform: translateY(1px); opacity:.95 }
+h1.hi {
+  font-weight: 700; font-size: 36px; line-height: 1.05; letter-spacing: .2px;
+  color: rgba(255,255,255,.96); text-shadow: 0 2px 16px rgba(0,0,0,.08);
+}
+::-webkit-scrollbar{ width:10px;height:10px } 
+::-webkit-scrollbar-thumb{ background:rgba(58,53,94,.15); border-radius:999px }

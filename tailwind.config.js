@@ -1,23 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  content: ["./index.html","./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-      },
       colors: {
-        animaStart: "#fde2f1",
-        animaEnd: "#e6e1ff",
-        animaRed: "#ff8a8a",
-        animaOrange: "#f9c97a",
-        animaGreen: "#8ee08b",
-        animaText: "#1a1a1a",
+        anima: {
+          ink: "#3A355E",
+          pink: "#F6B1D0",
+          lilac: "#CDBBFF",
+          sky:  "#9AD7FF",
+          peach:"#FFD9C7"
+        }
       },
       boxShadow: {
-        glow: "0 0 50px rgba(255, 192, 203, 0.35)",
+        glass: "0 12px 40px rgba(58,53,94,.18)"
+      },
+      borderRadius: {
+        xl2: "28px"
       }
-    },
+    }
   },
-  plugins: [],
+  plugins: []
 }
